@@ -18,6 +18,10 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+img, table {
+  max-width: 100%;
+  height: auto;
+}
 .Style4 {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 9px;
@@ -29,6 +33,39 @@ body {
 .Style6 {font-size: 14px}
 .Style7 {
 	font-size: small
+}
+.responsive-container {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table td {
+  word-break: break-word;
+}
+ .menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* aligne les images par le bas */
+  gap: 0px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.menu-nav img {
+  height: 100px;       /* hauteur identique pour tous */
+  width: auto;         /* largeur auto = conserve le ratio */
+  display: block;
+}
+
+  @media (max-width: 500px) {
+  .menu-nav img {
+    height: 70px;
+  }
 }
 
 -->
@@ -78,11 +115,11 @@ w.document.close();
 </head>
 
 <body onLoad="MM_preloadImages('images/m_home_o.jpg','images/m_scapes_o.jpg','images/m_portraits_o.jpg','images/m_animas_o.jpg','images/m_contact_o.jpg','images/m_home_3_o.jpg','images/m_dessins_o.jpg','images/m_abs-traits_o.jpg','images/m_animas_o_up.jpg')">
-<div align="center">
+<div align="center" class="responsive-container">
   <p class="Style4"><a href="http://www.alexandrezerbe.com/index.html"><img src="images/nom.jpg" width="445" height="29" /></a></p>
   <table width="790" border="0" bgcolor="#DDE4E6" class="zerbe">
     <tr>
-      <td colspan="3"><div align="center"><a href="scapes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image84','','images/m_scapes_o.jpg',1)"><img src="images/m_scapes.jpg" name="Image84" width="96" height="100" border="0"></a><a href="portraits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image85','','images/m_portraits_o.jpg',1)"><img src="images/m_portraits.jpg" name="Image85" width="96" height="100" border="0"></a><a href="animas.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('animas','','images/m_animas_o.jpg',1)"><img src="images/m_animas_o.jpg" alt="Animas" name="animas" width="95" height="100" border="0"></a><a href="dessins.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image86','','images/m_dessins_o.jpg',1)"><img src="images/m_dessins.jpg" name="Image86" width="95" height="100" border="0"></a><a href="abs-traits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image87','','images/m_abs-traits_o.jpg',1)"><img src="images/m_abs-traits.jpg" name="Image87" width="95" height="100" border="0"></a><a href="contact.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image88','','images/m_contact_o.jpg',1)"><img src="images/m_contact.jpg" name="Image88" width="135" height="100" border="0"></a></div></td>
+      <td colspan="3"><div align="center" class="menu-nav"><a href="scapes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image84','','images/m_scapes_o.jpg',1)"><img src="images/m_scapes.jpg" name="Image84" width="96" height="100" border="0"></a><a href="portraits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image85','','images/m_portraits_o.jpg',1)"><img src="images/m_portraits.jpg" name="Image85" width="96" height="100" border="0"></a><a href="animas.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('animas','','images/m_animas_o.jpg',1)"><img src="images/m_animas_o.jpg" alt="Animas" name="animas" width="95" height="100" border="0"></a><a href="dessins.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image86','','images/m_dessins_o.jpg',1)"><img src="images/m_dessins.jpg" name="Image86" width="95" height="100" border="0"></a><a href="abs-traits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image87','','images/m_abs-traits_o.jpg',1)"><img src="images/m_abs-traits.jpg" name="Image87" width="95" height="100" border="0"></a><a href="contact.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image88','','images/m_contact_o.jpg',1)"><img src="images/m_contact.jpg" name="Image88" width="135" height="100" border="0"></a></div></td>
     </tr>
     <tr>
       <td colspan="3"><p>&nbsp;</p>
@@ -825,7 +862,7 @@ acrylique sur toile, 48&quot;x30&quot; </div></td>
     </div></td>
   </tr>
   <tr>
-  <td colspan="3"><div align="center"><a href="scapes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('scapes','','images/m_scapes_o.jpg',1)"><img src="images/m_scapes.jpg" alt="Scapes" name="scapes" width="96" height="100" border="0"></a><a href="portraits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('portraits','','images/m_portraits_o.jpg',1)"><img src="images/m_portraits.jpg" alt="Portraits" name="portraits" width="96" height="100" border="0"></a><a href="animas.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image89','','images/m_animas_o_up.jpg',1)"><img src="images/m_animas_o.jpg" name="Image89" width="95" height="100" border="0"></a><a href="dessins.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dessins','','images/m_dessins_o.jpg',1)"><img src="images/m_dessins.jpg" alt="Dessins" name="dessins" width="95" height="100" border="0"></a><a href="abs-traits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('abs-traits','','images/m_abs-traits_o.jpg',1)"><img src="images/m_abs-traits.jpg" alt="Abs-traits" name="abs-traits" width="95" height="100" border="0"></a><a href="contact.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('contact','','images/m_contact_o.jpg',1)"><img src="images/m_contact.jpg" alt="Contact" name="contact" width="135" height="100" border="0"></a></div></td>
+  <td colspan="3"><div align="center" class="menu-nav"><a href="scapes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('scapes','','images/m_scapes_o.jpg',1)"><img src="images/m_scapes.jpg" alt="Scapes" name="scapes" width="96" height="100" border="0"></a><a href="portraits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('portraits','','images/m_portraits_o.jpg',1)"><img src="images/m_portraits.jpg" alt="Portraits" name="portraits" width="96" height="100" border="0"></a><a href="animas.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image89','','images/m_animas_o_up.jpg',1)"><img src="images/m_animas_o.jpg" name="Image89" width="95" height="100" border="0"></a><a href="dessins.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dessins','','images/m_dessins_o.jpg',1)"><img src="images/m_dessins.jpg" alt="Dessins" name="dessins" width="95" height="100" border="0"></a><a href="abs-traits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('abs-traits','','images/m_abs-traits_o.jpg',1)"><img src="images/m_abs-traits.jpg" alt="Abs-traits" name="abs-traits" width="95" height="100" border="0"></a><a href="contact.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('contact','','images/m_contact_o.jpg',1)"><img src="images/m_contact.jpg" alt="Contact" name="contact" width="135" height="100" border="0"></a></div></td>
   </tr>
   </table>
   
