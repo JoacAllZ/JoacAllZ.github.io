@@ -40,17 +40,28 @@ img, table {
   max-width: 780px;
   margin: 0 auto;
 }
-.menu-nav {
-    white-space: nowrap;
-    overflow-x: auto;
-    text-align: center;
-  }
+
+ .menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* aligne les images par le bas */
+  gap: 0px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
 
 .menu-nav img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
+  height: 100px;       /* hauteur identique pour tous */
+  width: auto;         /* largeur auto = conserve le ratio */
+  display: block;
 }
+
+  @media (max-width: 500px) {
+  .menu-nav img {
+    height: 70px;
+  }
+}
+
 
 -->
 </style>
@@ -107,26 +118,27 @@ w.document.close();
   <td colspan="3">
     <div class="menu-nav">
       <a href="scapes.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('scapes','','images/m_scapes_o.jpg',1)">
-        <img src="images/m_scapes_o.jpg" alt="Scapes" name="scapes" width="96" height="100" />
+        <img src="images/m_scapes_o.jpg" alt="Scapes" name="scapes" />
       </a>
       <a href="portraits.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image161','','images/m_portraits_o.jpg',1)">
-        <img src="images/m_portraits.jpg" name="Image161" width="96" height="100" id="Image161" />
+        <img src="images/m_portraits.jpg" alt="Portraits" name="Image161" id="Image161" />
       </a>
       <a href="animas.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image162','','images/m_animas_o.jpg',1)">
-        <img src="images/m_animas.jpg" name="Image162" width="95" height="100" id="Image162" />
+        <img src="images/m_animas.jpg" alt="Animas" name="Image162" id="Image162" />
       </a>
       <a href="dessins.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image163','','images/m_dessins_o.jpg',1)">
-        <img src="images/m_dessins.jpg" name="Image163" width="95" height="100" id="Image163" />
+        <img src="images/m_dessins.jpg" alt="Dessins" name="Image163" id="Image163" />
       </a>
       <a href="abs-traits.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image164','','images/m_abs-traits_o.jpg',1)">
-        <img src="images/m_abs-traits.jpg" name="Image164" width="95" height="100" id="Image164" />
+        <img src="images/m_abs-traits.jpg" alt="Abstraits" name="Image164" id="Image164" />
       </a>
       <a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image165','','images/m_contact_o.jpg',0)">
-        <img src="images/m_contact.jpg" name="Image165" width="135" height="100" id="Image165" />
+        <img src="images/m_contact.jpg" alt="Contact" name="Image165" id="Image165" />
       </a>
     </div>
   </td>
 </tr>
+
 
     <tr>
       <td colspan="3"><p align="center">&nbsp;</p>
@@ -1368,7 +1380,7 @@ w.document.close();
     </tr>
     <tr>
       <td colspan="3" class="style1">
-        <div align="center">
+        <div align="center" class="menu-nav">
           <a href="scapes.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image166','','images/m_scapes_o_up.jpg',1)"><img src="images/m_scapes_o.jpg" name="Image166" width="96" height="100" border="0" id="Image166" /></a><a href="portraits.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('portraits','','images/m_portraits_o.jpg',1)"><img src="images/m_portraits.jpg" alt="Portraits" name="portraits" width="96" height="100" border="0" /></a><a href="animas.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('animas','','images/m_animas_o.jpg',1)"><img src="images/m_animas.jpg" alt="Animas" name="animas" width="95" height="100" border="0" /></a><a href="dessins.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('dessins','','images/m_dessins_o.jpg',1)"><img src="images/m_dessins.jpg" alt="Dessins" name="dessins" width="95" height="100" border="0" /></a><a href="abs-traits.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('abs-traits','','images/m_abs-traits_o.jpg',1)"><img src="images/m_abs-traits.jpg" alt="Abs-traits" name="abs-traits" width="95" height="100" border="0"></a><a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('contact','','images/m_contact_o.jpg',1)"><img src="images/m_contact.jpg" alt="Contact" name="contact" width="135" height="100" border="0" /></a>
       </div>
   </td>
