@@ -106,6 +106,34 @@ img, table {
   }
 }
 
+/* style perso pour popup image */
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+#lightbox-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 -->
 </style>
 <script type="text/JavaScript">
@@ -132,6 +160,32 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
+
+// Nouvelle version automatique
+document.addEventListener('DOMContentLoaded', function () {
+  const overlay = document.getElementById("lightbox-overlay");
+  const overlayImg = overlay.querySelector("img");
+
+  // Attache l'événement à tous les liens vers une grande image
+  document.querySelectorAll('a[href$=".jpg"], a[href$=".JPG"], a[href$=".jpeg"]').forEach(link => {
+    const img = link.querySelector("img");
+    if (img && link.href.includes("images/big/")) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); // Empêche le lien de s’ouvrir normalement
+        overlayImg.src = link.href;
+        overlay.classList.add("visible");
+      });
+    }
+  });
+
+  // Fermer le popup au clic
+  overlay.addEventListener("click", () => {
+    overlay.classList.remove("visible");
+    overlayImg.src = "";
+  });
+});
+
+
 //-->
 </script>
 </head>
@@ -532,6 +586,10 @@ function MM_swapImage() { //v3.0
 
 <p class="zerbe">&copy; 2006-2025. Alexandre Zerb&eacute;. Tous droits r&eacute;serv&eacute;s.</p>
 </div>
+<div id="lightbox-overlay" onclick="this.classList.remove('visible')">
+  <img src="" alt="Agrandissement">
+</div>
+
 </body>
 </html>
 
